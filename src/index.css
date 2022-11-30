@@ -1,13 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: Georgia, serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(242, 247, 247);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.red_line {
+  animation: leftLoading 500ms linear  forwards;
+}
+.blue_line {
+  animation: rightLoading 500ms linear  forwards;
+}
+#winnerCard {
+  filter: blur(0);
+}
+
+@keyframes leftLoading {
+  0% {left: 0; width: 0; }
+ 100% {left: 0; width: 100%; }
+ 
+}
+@keyframes rightLoading {
+  0% {right: 0; width: 100%; }
+ 100% {right: 0; width: 0; }
 }
